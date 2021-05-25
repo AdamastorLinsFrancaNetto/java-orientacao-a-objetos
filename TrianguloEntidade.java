@@ -3,14 +3,15 @@ package entidade;
 public class TrianguloEntidade {
 	
 	String nomeTriangulo;
-	public double a, b, c;
+	public double a;
+	public double b;
+	public double c;
 	
-	
-	public TrianguloEntidade(String nomeTriangulo, double aa, double bb, double cc){
+	public TrianguloEntidade(String nomeTriangulo, double a, double b, double c){
 		this.nomeTriangulo = nomeTriangulo;
-		this.a = aa;
-		this.b = bb;
-		this.c = cc;
+		this.a = a;
+		this.b = b;
+		this.c = c;
 	}
 	
 	public double calcularArea() {
