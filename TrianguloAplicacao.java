@@ -12,12 +12,13 @@ public class TrianguloAplicacao {
 		
 		TrianguloEntidade x, y;
 		
-		System.out.println("Informe o nome e medida do triângulo: ");
+		System.out.println("TRIÂNGULO:");
+		System.out.println("Informe o nome e medida: ");
 		x = new TrianguloEntidade(sc.next(),
 				sc.nextDouble(), 
 				sc.nextDouble(), 
 				sc.nextDouble());
-		System.out.println("Informe o nome e medida do triângulo: ");
+		System.out.println("Informe o nome e medida: ");
 		y = new TrianguloEntidade(sc.next(),
 				sc.nextDouble(), 
 				sc.nextDouble(), 
