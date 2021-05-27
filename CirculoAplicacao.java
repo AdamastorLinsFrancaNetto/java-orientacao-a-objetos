@@ -14,12 +14,12 @@ public class CirculoAplicacao {
 		System.out.print("Informe o raio: ");
 		double raio = sc.nextDouble();
 
-		double c = CirculoUtilitario.circunferencia(raio);
+		double circunferencia = CirculoUtilitario.circunferencia(raio);
 
-		double v = CirculoUtilitario.volume(raio);
+		double volume = CirculoUtilitario.volume(raio);
 
-		System.out.printf("Circunferência: %.2f%n", c);
-		System.out.printf("Volume: %.2f%n", v);
+		System.out.printf("Circunferência: %.2f%n", circunferencia);
+		System.out.printf("Volume: %.2f%n", volume);
 		System.out.printf("PI: %.2f%n", CirculoUtilitario.PI);
 
 		sc.close();
