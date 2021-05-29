@@ -2,7 +2,6 @@ package aplicacao;
 
 import entidade.ClienteCompraEntidade;
 import entidade.ClienteEntidade;
-import entidade.ClienteProdutoEntidade;
 
 public class ClienteAplicacao {
 	
@@ -15,8 +14,8 @@ public class ClienteAplicacao {
 		compra1.adicionarItem("Calça", 100.10, 2);
 		
 		ClienteCompraEntidade compra2 = new ClienteCompraEntidade();
-		compra2.adicionarItem(new ClienteProdutoEntidade("Mouse", 100.00), 1);
-		compra2.adicionarItem(new ClienteProdutoEntidade("Teclado", 200.00), 1);
+		compra2.adicionarItem("Mouse", 100.00, 1);
+		compra2.adicionarItem("Teclado", 200.00, 1);
 		
 		cliente1.adicionarCompras(compra1);
 		cliente1.adicionarCompras(compra2);

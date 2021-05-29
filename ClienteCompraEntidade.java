@@ -7,9 +7,9 @@ public class ClienteCompraEntidade {
 	
 	final List<ClienteItemEntidade> listaDeItens = new ArrayList<>();
 		
-	public void adicionarItem(ClienteProdutoEntidade prod, int quantidade) {
-		this.listaDeItens.add(new ClienteItemEntidade(prod, quantidade));
-	}
+	//public void adicionarItem(ClienteProdutoEntidade prod, int quantidade) {
+		//this.listaDeItens.add(new ClienteItemEntidade(prod, quantidade));
+	//}
 	
 	public void adicionarItem(String nomeProduto, double preco, int quantidade) {
 		var produto = new ClienteProdutoEntidade(nomeProduto, preco);
