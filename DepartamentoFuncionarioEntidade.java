@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import entidade.enumerado.DepartamentoEmuneracao;
+import entidade.enumeracao.DepartamentoEmuneracao;
 
 public class DepartamentoFuncionarioEntidade {
 	
@@ -13,7 +13,7 @@ public class DepartamentoFuncionarioEntidade {
 	private Double salarioBase;
 	
 	private DepartamentoEntidade departamento;
-	private List<DepartamentoContrato> contratos = new ArrayList<>();
+	private List<DepartamentoContratoEntidade> contratos = new ArrayList<>();
 	
 	public DepartamentoFuncionarioEntidade
 	(String name, DepartamentoEmuneracao nivel, Double salarioBase, DepartamentoEntidade departamento) {
@@ -23,18 +23,18 @@ public class DepartamentoFuncionarioEntidade {
 		this.departamento = departamento;
 	}
 	
-	public void addContrato(DepartamentoContrato contrato) {
+	public void addContrato(DepartamentoContratoEntidade contrato) {
 		contratos.add(contrato);
 	}
 	
-	public void removerContrato(DepartamentoContrato contrato) {
+	public void removerContrato(DepartamentoContratoEntidade contrato) {
 		contratos.remove(contrato);
 	}
 	
 	public Double renda(int ano, int mes) {
 		double soma = salarioBase;
 		Calendar cal = Calendar.getInstance();
-		for(DepartamentoContrato c : contratos) {
+		for(DepartamentoContratoEntidade c : contratos) {
 			cal.setTime(c.getData());
 			int c_ano = cal.get(Calendar.YEAR);
 			int c_mes = 1 + cal.get(Calendar.MONTH);
@@ -77,7 +77,7 @@ public class DepartamentoFuncionarioEntidade {
 		this.departamento = departamento;
 	}
 
-	public List<DepartamentoContrato> getContratos() {
+	public List<DepartamentoContratoEntidade> getContratos() {
 		return contratos;
 	}
 

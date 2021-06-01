@@ -2,13 +2,13 @@ package entidade;
 
 import java.util.Date;
 
-public class DepartamentoContrato {
+public class DepartamentoContratoEntidade {
 	
 	private Date data;
 	private Double valorPorHora;
 	private Integer horas;
 
-	public DepartamentoContrato(Date data, Double valorPorHora, Integer horas) {
+	public DepartamentoContratoEntidade(Date data, Double valorPorHora, Integer horas) {
 		this.data = data;
 		this.valorPorHora = valorPorHora;
 		this.horas = horas;

@@ -5,10 +5,10 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
-import entidade.DepartamentoContrato;
+import entidade.DepartamentoContratoEntidade;
 import entidade.DepartamentoEntidade;
 import entidade.DepartamentoFuncionarioEntidade;
-import entidade.enumerado.DepartamentoEmuneracao;
+import entidade.enumeracao.DepartamentoEmuneracao;
 
 public class DepartamentoAplicacao {
 	
@@ -43,8 +43,8 @@ public class DepartamentoAplicacao {
 			double valorPorHora = sc.nextDouble();
 			System.out.print("Quantidade de horas: ");
 			int horas = sc.nextInt();
-			DepartamentoContrato contrato = 
-					new DepartamentoContrato(dataContrato, valorPorHora, horas);
+			DepartamentoContratoEntidade contrato = 
+					new DepartamentoContratoEntidade(dataContrato, valorPorHora, horas);
 			funcionario.addContrato(contrato);
 		}
 		
