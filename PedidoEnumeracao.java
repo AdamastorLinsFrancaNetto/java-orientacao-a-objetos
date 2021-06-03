@@ -3,7 +3,7 @@ package entidade.enumeracao;
 public enum PedidoEnumeracao {
 	
 	PAGAMENTO_PENDENTE,
-	EM_PROCESSANDO,
+	EM_PROCESSAMENTO,
 	ENVIADO,
 	ENTREGUE
 	

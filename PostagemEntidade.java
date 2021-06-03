@@ -5,9 +5,9 @@ import java.util.List;
 
 public class PostagemEntidade {
 	
-	String data;
 	private String titulo;
 	private String conteudo;
+	private String data;
 	private Integer curtidas = 0;
 	
 	public PostagemEntidade

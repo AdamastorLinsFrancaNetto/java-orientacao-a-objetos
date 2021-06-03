@@ -1,6 +1,7 @@
 package entidade;
 
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -9,23 +10,23 @@ import entidade.enumeracao.PedidoEnumeracao;
 
 public class PedidoEntidade {
 	
-	private Date momento;
 	private PedidoEnumeracao situacao;
 	private PedidoClienteEntidade cliente;
-	private PedidoItensEntidade item;
+	private String momento;
 	
-	SimpleDateFormat dataFormato = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+	static SimpleDateFormat dataFormato = new SimpleDateFormat("dd/MM/yyyy");
+	static DateTimeFormatter dataMomento = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 	List<PedidoItensEntidade> itens = new ArrayList<>();
 	
 	public PedidoEntidade
 	(String nome, String email, Date aniversario, 
-			Date momento, PedidoEnumeracao situacao) {
+			String momento, PedidoEnumeracao situacao) {
 		cliente = new PedidoClienteEntidade(nome, email, aniversario);
 		this.momento = momento;
 		this.situacao = situacao;
 	}
 	
-	public Double total() {
+	public double total() {
 		Double total = 0.00;
 		for(PedidoItensEntidade item : itens) {
 			total += item.subTotal();
@@ -40,17 +41,31 @@ public class PedidoEntidade {
 	public void removerItem (PedidoItensEntidade item) {
 		itens.remove(item);
 	}
-	
+
 	public String toString() {
-		return "\nRESUMO DO PEDIDO:"
-				+ "\nMomento do pedido: " + dataFormato.format(momento)
-				+ "\nSituação: " + situacao
-				+ "\nCliente: " +  cliente.getNome()
-				+ "\nAniversário: " + cliente.getAniversario()
-				+ "\nEmail: " + cliente.getEmail()
-				+ "\n"
-				+ item.toString();
-				
+		StringBuilder sb = new StringBuilder();
+		sb.append("\nRESUMO DO PEDIDO:");
+		sb.append("\nMomento do pedido: " + momento);
+		sb.append("\nSituação: " + situacao);
+		sb.append("\nCliente: " +  cliente.getNome());
+		sb.append("\nAniversário: " + dataFormato.format(cliente.getAniversario()));
+		sb.append("\nEmail: " + cliente.getEmail());
+		sb.append("\n");
+		sb.append("\nItens do pedido:");
+		int count = 1;
+		for (PedidoItensEntidade i : itens) {
+			sb.append("\nItem #" + count);
+			sb.append("\nProduto: " + i.getProduto().getNome());
+			sb.append("\nPreço: R$ ");
+			sb.append(String.format("%.2f", i.getProduto().getPreco()));
+			sb.append("\nQuantidade: " + i.getQuantidade());
+			sb.append("\nSubtotal: R$ ");
+			sb.append(String.format("%.2f", i.subTotal()));
+			count++;
+		}
+		sb.append("\n\nTOTAL: R$ ");
+		sb.append(String.format("%.2f", this.total()));
+		return sb.toString();
 	}
 	
 }
