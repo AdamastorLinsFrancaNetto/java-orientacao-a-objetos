@@ -16,7 +16,7 @@ public class PedidoAplicacao {
 	public static void main(String[] args) throws ParseException {
 		
 		Scanner sc = new Scanner(System.in);
-		SimpleDateFormat dataFormato = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat dataAniversario = new SimpleDateFormat("dd/MM/yyyy");
 		DateTimeFormatter dataMomento = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 		
 		System.out.println("Informe os dados do cliente:");
@@ -25,15 +25,15 @@ public class PedidoAplicacao {
 		System.out.print("Email: ");
 		String email = sc.nextLine();
 		System.out.print("Aniversário (DD/MM/AAAA): ");
-		Date aniversario = dataFormato.parse(sc.nextLine());
+		Date aniversario = dataAniversario.parse(sc.nextLine());
 		
 		System.out.println("\nInforme os dados do pedido:");
 		String data = dataMomento.format(LocalDateTime.now());
 		System.out.print("Situação: ");
-		String situacao = sc.nextLine();
+		PedidoEnumeracao situacao = PedidoEnumeracao.valueOf(sc.nextLine());
 		
 		PedidoEntidade pedido1 = new PedidoEntidade
-				(nome, email, aniversario, data, PedidoEnumeracao.valueOf(situacao));
+				(nome, email, aniversario, data, situacao);
 		
 		System.out.print("Quantos itens terá o pedido? ");
 		int quantidade = sc.nextInt();
@@ -45,7 +45,9 @@ public class PedidoAplicacao {
 			double preco = sc.nextDouble();
 			System.out.print("Quantidade: ");
 			int quantidadeItem = sc.nextInt();
-			PedidoItensEntidade item = new PedidoItensEntidade(nomeProduto, preco, quantidadeItem);
+			
+			PedidoItensEntidade item = new PedidoItensEntidade
+					(nomeProduto, preco, quantidadeItem);
 			pedido1.adicionarItem(item);
 		}
 

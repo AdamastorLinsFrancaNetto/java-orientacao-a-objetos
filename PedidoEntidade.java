@@ -27,7 +27,7 @@ public class PedidoEntidade {
 	}
 	
 	public double total() {
-		Double total = 0.00;
+		double total = 0;
 		for(PedidoItensEntidade item : itens) {
 			total += item.subTotal();
 		}

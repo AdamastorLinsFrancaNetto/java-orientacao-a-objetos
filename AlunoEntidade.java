@@ -2,10 +2,10 @@ package entidade;
 
 public class AlunoEntidade {
 	
-	String nomeAluno;
-	double nota1;
-	double nota2;
-	double nota3;
+	private String nomeAluno;
+	private Double nota1;
+	private Double nota2;
+	private Double nota3;
 	
 	public AlunoEntidade(String nomeAluno, double nota1, double nota2, double nota3) {
 		this.nomeAluno = nomeAluno;
@@ -25,22 +25,21 @@ public class AlunoEntidade {
 	public String resultado() {
 		String resultado;
 		if (this.mediaFinal() > 7.0) {
-			resultado = "Aluno: " + this.nomeAluno
+			resultado = "\nNome: " + this.nomeAluno
 					+ "\n"
-					+ "Média Final = " + this.mediaFinal()
-					+ "\nPassou por média!\n";		
+					+ "Média Final = " + String.format("%.1f", this.mediaFinal())
+					+ "\nPassou por média!";		
 		} else if (this.mediaFinal() > 3.0) {
-			resultado = "Aluno: " + this.nomeAluno
+			resultado = "\nNome: " + this.nomeAluno
 					+ "\n"
-					+ "Média final = " + this.mediaFinal()
+					+ "Média final = " + String.format("%.1f", this.mediaFinal())
 					+ "\nEm recuperação!\n"
-					+ "Preciar tirar = " + this.calcRecuperacao()
-					+ "\n";
+					+ "Preciar tirar = " + String.format("%.1f", this.calcRecuperacao());
 		} else {
-			resultado = "Aluno: " + this.nomeAluno
+			resultado = "\nNome: " + this.nomeAluno
 					+ "\n"
-					+ "Média final = " + this.mediaFinal()
-					+ "\nReprovado!\n";
+					+ "Média final = " + String.format("%.1f", this.mediaFinal())
+					+ "\nReprovado!";
 		}
 		return resultado;
 	}
