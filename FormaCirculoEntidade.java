@@ -1,6 +1,6 @@
-package entidades;
+package entidade;
 
-import enumeracao.FormaEnumeracao;
+import entidade.enumeracao.FormaEnumeracao;
 
 public class FormaCirculoEntidade extends FormaEntidade{
 	
@@ -36,3 +36,4 @@ public class FormaCirculoEntidade extends FormaEntidade{
 				+ "\n¡REA: " + String.format("%.2f", this.area());				
 	}
 }
+

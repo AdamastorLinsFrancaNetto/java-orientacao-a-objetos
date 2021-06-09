@@ -1,6 +1,6 @@
-package entidades;
+package entidade;
 
-import enumeracao.FormaEnumeracao;
+import entidade.enumeracao.FormaEnumeracao;
 
 public abstract class FormaEntidade {
 	

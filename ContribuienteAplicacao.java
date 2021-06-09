@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import entidades.ContribuenteEntidade;
-import entidades.ContribuentePfEntidade;
-import entidades.ContribuentePjEntidade;
+import entidade.ContribuenteEntidade;
+import entidade.ContribuentePfEntidade;
+import entidade.ContribuentePjEntidade;
 
 public class ContribuienteAplicacao {
 	
@@ -44,7 +44,7 @@ public class ContribuienteAplicacao {
 		
 		System.out.println("\nVALOR DO IMPOSTO:");
 		for(ContribuenteEntidade c : contribuentes) {
-			System.out.printf("%.9s - Imposto: R$ %.2f%n", c.getNome(), c.calcImposto());	
+			System.out.printf("%s - Imposto: R$ %.2f%n", c.getNome(), c.calcImposto());	
 		}
 		
 		double soma = 0.00;

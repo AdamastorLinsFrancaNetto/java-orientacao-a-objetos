@@ -1,4 +1,4 @@
-package enumeracao;
+package entidade.enumeracao;
 
 public enum FormaEnumeracao {
 	

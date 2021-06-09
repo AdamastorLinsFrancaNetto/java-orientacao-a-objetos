@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import entidades.FormaCirculoEntidade;
-import entidades.FormaEntidade;
-import entidades.FormaRetanguloEntidade;
-import enumeracao.FormaEnumeracao;
+import entidade.FormaCirculoEntidade;
+import entidade.FormaEntidade;
+import entidade.FormaRetanguloEntidade;
+import entidade.enumeracao.FormaEnumeracao;
 
 public class FormaAplicacao {
 	
