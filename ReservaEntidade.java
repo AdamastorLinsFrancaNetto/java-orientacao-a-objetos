@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import entidade.excecoes.ReservaExcecoes;
+import entidade.excecoes.ReservaExcecao;
 
 public class ReservaEntidade {
 	
@@ -15,9 +15,9 @@ public class ReservaEntidade {
 	
 	private static SimpleDateFormat dataFormatada = new SimpleDateFormat("dd/MM/yyyy");
 	
-	public ReservaEntidade(String nomeCliente, Integer numeroQuartp, Date dataEntrada, Date dataSaida) throws ReservaExcecoes {
+	public ReservaEntidade(String nomeCliente, Integer numeroQuartp, Date dataEntrada, Date dataSaida) throws ReservaExcecao {
 		if (!dataSaida.after(dataEntrada)) {
-			throw new ReservaExcecoes("A data de saída não pode ser antes da data de entrada!");
+			throw new ReservaExcecao("A data de saída não pode ser antes da data de entrada!");
 		}
 		this.nomeCliente = nomeCliente;
 		this.numeroQuarto = numeroQuartp;
@@ -54,16 +54,16 @@ public class ReservaEntidade {
 		return TimeUnit.DAYS.convert(diferenca, TimeUnit.MILLISECONDS);
 	}
 	
-	public void atualizarDatas(Date diaEntrada, Date diaSaida) throws ReservaExcecoes {
+	public void atualizarDatas(Date diaEntrada, Date diaSaida) throws ReservaExcecao {
 		Date agora = new Date();
 		if (dataEntrada.before(agora) || dataSaida.before(agora)) {
-			throw new ReservaExcecoes("A data da reserva deve ser atualizada com datas futuras!");
+			throw new ReservaExcecao("A data da reserva deve ser atualizada com datas futuras!");
 		}
 		if (dataEntrada.before(agora) && dataSaida.before(agora)) {
-			throw new ReservaExcecoes("A data da reserva deve ser atualizada com datas futuras!");
+			throw new ReservaExcecao("A data da reserva deve ser atualizada com datas futuras!");
 		}
 		if (!dataSaida.after(dataEntrada)) {
-			throw new ReservaExcecoes("A data de saída não pode ser antes da data de entrada!");
+			throw new ReservaExcecao("A data de saída não pode ser antes da data de entrada!");
 		}
 		this.dataEntrada = diaEntrada;
 		this.dataSaida = diaSaida;

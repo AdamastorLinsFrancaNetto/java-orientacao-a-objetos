@@ -1,4 +1,4 @@
-package entidade.enumeracao;
+package entidade.enumeracoes;
 
 public enum DepartamentoEmuneracao {
 	

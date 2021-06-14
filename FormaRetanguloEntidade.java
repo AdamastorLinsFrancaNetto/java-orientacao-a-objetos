@@ -1,6 +1,6 @@
 package entidade;
 
-import entidade.enumeracao.FormaEnumeracao;
+import entidade.enumeracoes.FormaEnumeracao;
 
 public class FormaRetanguloEntidade extends FormaEntidade {
 

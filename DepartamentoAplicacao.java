@@ -8,7 +8,7 @@ import java.util.Scanner;
 import entidade.DepartamentoContratoEntidade;
 import entidade.DepartamentoEntidade;
 import entidade.DepartamentoFuncionarioEntidade;
-import entidade.enumeracao.DepartamentoEmuneracao;
+import entidade.enumeracoes.DepartamentoEmuneracao;
 
 public class DepartamentoAplicacao {
 	

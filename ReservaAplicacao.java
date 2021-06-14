@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 import entidade.ReservaEntidade;
-import entidade.excecoes.ReservaExcecoes;
+import entidade.excecoes.ReservaExcecao;
 
 public class ReservaAplicacao {
 	
@@ -41,7 +41,7 @@ public class ReservaAplicacao {
 		catch (ParseException e) {
 			System.out.println("Data inválida!");
 		}
-		catch (ReservaExcecoes e) {
+		catch (ReservaExcecao e) {
 			System.out.println("Erro na reserva: " + e.getMessage());
 		}
 		catch (RuntimeException e) {

@@ -1,6 +1,6 @@
 package entidade;
 
-import entidade.enumeracao.FormaEnumeracao;
+import entidade.enumeracoes.FormaEnumeracao;
 
 public class FormaCirculoEntidade extends FormaEntidade{
 	

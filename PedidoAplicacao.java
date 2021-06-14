@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 import entidade.PedidoEntidade;
 import entidade.PedidoItensEntidade;
-import entidade.enumeracao.PedidoEnumeracao;
+import entidade.enumeracoes.PedidoEnumeracao;
 
 public class PedidoAplicacao {
 	

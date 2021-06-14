@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import entidade.enumeracao.DepartamentoEmuneracao;
+import entidade.enumeracoes.DepartamentoEmuneracao;
 
 public class DepartamentoFuncionarioEntidade {
 	

@@ -1,12 +1,16 @@
 package entidade;
 
-public class ContaPjEntidade extends ContaEntidade {
+public final class ContaPjEntidade extends ContaEntidade {
 	
 	private Double limiteEmprestimo;
 
+	public ContaPjEntidade() {
+		super();
+	}
+	
 	public ContaPjEntidade
-	(String correntista, Double saldo, Integer agencia, Double limiteEmprestimo) {
-		super(correntista, saldo, agencia);
+	(String correntista, Double saldo, Integer agencia, Double limiteSaque, Double limiteEmprestimo) {
+		super(correntista, saldo, agencia, limiteSaque);
 		this.limiteEmprestimo = limiteEmprestimo;
 	}
 
@@ -17,9 +21,11 @@ public class ContaPjEntidade extends ContaEntidade {
 	}
 	
 	@Override 
-	public final void saque (double valor){
+	public final void saque (double valor) {
 		super.saque(valor);
-		saldo -= 2.00;
+		if (getLiberacaoSaque() == true) {
+			saldo -= 5.00;
+		}
 	}
 
 	public Double getLimiteEmprestimo() {
@@ -28,6 +34,12 @@ public class ContaPjEntidade extends ContaEntidade {
 
 	public void setLimiteEmprestimo(Double limiteEmprestimo) {
 		this.limiteEmprestimo = limiteEmprestimo;
+	}
+	
+	@Override
+	public String toString() {
+		return super.toString() 
+				+ "\nLimite de empréstimo: R$ " + getLimiteEmprestimo();
 	}
 	
 }

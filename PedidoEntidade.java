@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import entidade.enumeracao.PedidoEnumeracao;
+import entidade.enumeracoes.PedidoEnumeracao;
 
 public class PedidoEntidade {
 	

@@ -7,7 +7,7 @@ import java.util.Scanner;
 import entidade.FormaCirculoEntidade;
 import entidade.FormaEntidade;
 import entidade.FormaRetanguloEntidade;
-import entidade.enumeracao.FormaEnumeracao;
+import entidade.enumeracoes.FormaEnumeracao;
 
 public class FormaAplicacao {
 	
