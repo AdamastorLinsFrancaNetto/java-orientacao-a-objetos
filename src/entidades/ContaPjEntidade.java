@@ -23,9 +23,7 @@ public final class ContaPjEntidade extends ContaEntidade {
 	@Override 
 	public final void saque (double valor) {
 		super.saque(valor);
-		if (getLiberacaoSaque() == true) {
-			saldo -= 5.00;
-		}
+		saldo -= 5.00;
 	}
 
 	public Double getLimiteEmprestimo() {

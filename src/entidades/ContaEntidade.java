@@ -8,7 +8,6 @@ public abstract class ContaEntidade {
 	private String correntista;
 	private Integer agencia;
 	private Double limiteSaque;
-	private Boolean liberacaoSaque = false;
 	
 	public ContaEntidade() {
 	}
@@ -21,25 +20,20 @@ public abstract class ContaEntidade {
 	}
 	
 	public void saque (double valor) {
-		verificacaoSaque(valor);
-		liberacaoSaque = true;
+		if (saldo < valor) {
+			throw new ContaExcecao("Saldo insuficiente!");
+		}
+		if (limiteSaque < valor) {
+			throw new ContaExcecao("A quantia excede o limite de saque!");
+		}
 		saldo -= valor;
 	}
 	
-	public void verificacaoSaque (double valor) {
-		if (valor > limiteSaque) {
-			throw new ContaExcecao("A quantia excede o limite de saque!");
-		} if (valor > saldo) {
+	public void transfere(double valor, ContaEntidade conta) {
+		if (saldo < valor) {
 			throw new ContaExcecao("Saldo insuficiente!");
 		}
-	}
-	
-	public boolean getLiberacaoSaque() {
-		return liberacaoSaque;
-	}
-	
-	public void setLiberacaoSaque(boolean liberacao) {
-		this.liberacaoSaque = liberacao;
+		saldo -= valor;
 	}
 	
 	public void deposito (double valor) {

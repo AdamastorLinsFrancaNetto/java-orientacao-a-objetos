@@ -16,9 +16,7 @@ public final class ContaPfEntidade extends ContaEntidade{
 	@Override 
 	public final void saque (double valor) {
 		super.saque(valor);
-		if (getLiberacaoSaque() == true) {
-			saldo -= 3.00;
-		}
+		saldo -= 3.00;
 	}
 
 	public Boolean getCartaocredito() {

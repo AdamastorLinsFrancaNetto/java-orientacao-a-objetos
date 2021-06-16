@@ -61,8 +61,19 @@ public class ContaAplicacao {
 			valor = sc.nextDouble();
 			conta.saque(valor);
 		}
-		catch(ContaExcecao e) {
-			System.out.println("Erro de saque: " + e.getMessage());
+		catch(ContaExcecao ex) {
+			System.out.println("Erro de saque: " + ex.getMessage());
+		}
+		
+		//Conta para teste de transferência
+		ContaEntidade teste = new ContaPpEntidade();
+		
+		try {
+			System.out.print("\nTeste tranferência: R$ ");
+			valor = sc.nextDouble();
+			conta.transfere(valor, teste);
+		} catch (ContaExcecao ex){
+			System.out.println("Erro na tranferência: " + ex.getMessage());
 		}
 		
 		System.out.println(conta);	
