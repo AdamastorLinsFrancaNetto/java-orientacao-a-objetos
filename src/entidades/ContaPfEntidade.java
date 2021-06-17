@@ -1,4 +1,4 @@
-package entidade;
+package entidades;
 
 public final class ContaPfEntidade extends ContaEntidade{
 
@@ -8,8 +8,8 @@ public final class ContaPfEntidade extends ContaEntidade{
 		super();
 	}
 	
-	public ContaPfEntidade(String correntista, Double saldo, Integer agencia, Double limiteSaque, boolean cartaocredito) {
-		super(correntista, saldo, agencia, limiteSaque);
+	public ContaPfEntidade(String correntista, Integer agencia, Integer numeroConta, Double saldo, Double limiteSaque, boolean cartaocredito) {
+		super(correntista, agencia, numeroConta, saldo, limiteSaque);
 		this.cartaocredito = cartaocredito;
 	}
 		

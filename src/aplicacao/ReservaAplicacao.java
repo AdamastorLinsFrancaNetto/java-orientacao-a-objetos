@@ -5,8 +5,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-import entidade.ReservaEntidade;
-import entidade.excecoes.ReservaExcecao;
+import entidades.ReservaEntidade;
+import entidades.excecoes.ReservaExcecao;
 
 public class ReservaAplicacao {
 	

@@ -2,7 +2,7 @@ package aplicacao;
 
 import java.util.Scanner;
 
-import entidade.IOFutilitario;
+import entidades.IOFutilitario;
 
 public class IOFaplicacao {
 	

@@ -2,7 +2,7 @@ package aplicacao;
 
 import java.util.Scanner;
 
-import entidade.EstoqueEntidade;
+import entidades.EstoqueEntidade;
 
 public class EstoqueAplicacao {
 

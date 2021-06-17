@@ -1,10 +1,10 @@
-package entidade;
+package entidades;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import entidade.enumeracoes.DepartamentoEmuneracao;
+import entidades.enumeracoes.DepartamentoEmuneracao;
 
 public class DepartamentoFuncionarioEntidade {
 	

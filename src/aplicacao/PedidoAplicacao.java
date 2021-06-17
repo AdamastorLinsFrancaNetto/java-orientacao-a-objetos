@@ -7,9 +7,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Scanner;
 
-import entidade.PedidoEntidade;
-import entidade.PedidoItensEntidade;
-import entidade.enumeracoes.PedidoEnumeracao;
+import entidades.PedidoEntidade;
+import entidades.PedidoItensEntidade;
+import entidades.enumeracoes.PedidoEnumeracao;
 
 public class PedidoAplicacao {
 	

@@ -1,4 +1,4 @@
-package entidade;
+package entidades;
 
 public final class PagamentoFuncionarioTerceirizadoEntidade extends PagamentoFuncionarioEntidade{
 

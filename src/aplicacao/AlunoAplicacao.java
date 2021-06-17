@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import entidade.AlunoEntidade;
+import entidades.AlunoEntidade;
 
 public class AlunoAplicacao {
 	

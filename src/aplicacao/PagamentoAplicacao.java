@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import entidade.PagamentoFuncionarioEntidade;
-import entidade.PagamentoFuncionarioTerceirizadoEntidade;
+import entidades.PagamentoFuncionarioEntidade;
+import entidades.PagamentoFuncionarioTerceirizadoEntidade;
 
 public class PagamentoAplicacao {
 

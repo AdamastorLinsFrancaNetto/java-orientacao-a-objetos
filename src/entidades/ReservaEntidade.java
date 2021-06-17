@@ -1,10 +1,10 @@
-package entidade;
+package entidades;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import entidade.excecoes.ReservaExcecao;
+import entidades.excecoes.ReservaExcecao;
 
 public class ReservaEntidade {
 	

@@ -1,4 +1,4 @@
-package entidade;
+package entidades;
 
 public final class ContaPjEntidade extends ContaEntidade {
 	
@@ -9,8 +9,8 @@ public final class ContaPjEntidade extends ContaEntidade {
 	}
 	
 	public ContaPjEntidade
-	(String correntista, Double saldo, Integer agencia, Double limiteSaque, Double limiteEmprestimo) {
-		super(correntista, saldo, agencia, limiteSaque);
+	(String correntista, Integer agencia, Integer numeroConta, Double saldo, Double limiteSaque, Double limiteEmprestimo) {
+		super(correntista, agencia, numeroConta, saldo, limiteSaque);
 		this.limiteEmprestimo = limiteEmprestimo;
 	}
 

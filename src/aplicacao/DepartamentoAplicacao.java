@@ -5,10 +5,10 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
-import entidade.DepartamentoContratoEntidade;
-import entidade.DepartamentoEntidade;
-import entidade.DepartamentoFuncionarioEntidade;
-import entidade.enumeracoes.DepartamentoEmuneracao;
+import entidades.DepartamentoContratoEntidade;
+import entidades.DepartamentoEntidade;
+import entidades.DepartamentoFuncionarioEntidade;
+import entidades.enumeracoes.DepartamentoEmuneracao;
 
 public class DepartamentoAplicacao {
 	

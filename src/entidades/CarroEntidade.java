@@ -1,4 +1,4 @@
-package entidade;
+package entidades;
 
 public abstract class CarroEntidade {
 	

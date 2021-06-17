@@ -2,7 +2,7 @@ package aplicacao;
 
 import java.util.Scanner;
 
-import entidade.ProdutoEntidade;
+import entidades.ProdutoEntidade;
 
 public class ProdutoAplicacao {
 	

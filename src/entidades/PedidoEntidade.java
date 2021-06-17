@@ -1,4 +1,4 @@
-package entidade;
+package entidades;
 
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import entidade.enumeracoes.PedidoEnumeracao;
+import entidades.enumeracoes.PedidoEnumeracao;
 
 public class PedidoEntidade {
 	

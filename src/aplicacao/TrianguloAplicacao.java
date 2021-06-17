@@ -2,7 +2,7 @@ package aplicacao;
 
 import java.util.Scanner;
 
-import entidade.TrianguloEntidade;
+import entidades.TrianguloEntidade;
 
 public class TrianguloAplicacao {
 

@@ -1,21 +1,23 @@
-package entidade;
+package entidades;
 
-import entidade.excecoes.ContaExcecao;
+import entidades.excecoes.ContaExcecao;
 
-public abstract class ContaEntidade {
+public abstract class ContaEntidade implements Comparable<ContaEntidade>{
 	
-	protected Double saldo;
-	private String correntista;
 	private Integer agencia;
+	private Integer numeroConta;
+	private String correntista;
+	protected Double saldo;
 	private Double limiteSaque;
 	
 	public ContaEntidade() {
 	}
 	
-	public ContaEntidade(String correntista, Double saldo, Integer agencia, Double limiteSaque) {
+	public ContaEntidade(String correntista, Integer agencia, Integer numeroConta, Double saldo, Double limiteSaque) {
 		this.correntista = correntista;
-		this.saldo = saldo;
 		this.agencia = agencia;
+		this.numeroConta = numeroConta;
+		this.saldo = saldo;
 		this.limiteSaque = limiteSaque;
 	}
 	
@@ -38,6 +40,18 @@ public abstract class ContaEntidade {
 	
 	public void deposito (double valor) {
 		saldo += valor;
+	}
+	
+	@Override
+	public boolean equals(Object outraConta) {
+		ContaEntidade conta = (ContaEntidade) outraConta;
+		if(this.agencia != conta.agencia) {
+			return false;
+		}
+		if (this.numeroConta != conta.numeroConta) {
+			return false;
+		}
+		return true;
 	}
 	
 	public Double getSaldo() {
@@ -72,12 +86,26 @@ public abstract class ContaEntidade {
 		this.agencia = agencia;
 	}
 	
+	public Integer getNumeroConta() {
+		return numeroConta;
+	}
+
+	public void setNumeroConta(Integer numeroConta) {
+		this.numeroConta = numeroConta;
+	}
+
 	public String toString() {
 		return "\nCONTA:"
 			+ "\nAgência: " + getAgencia()
+			+ "\nNº da conta: " + getNumeroConta()
 			+ "\nCorrentista: " + getCorrentista()
 			+ "\nSaldo: R$ " + String.format("%.2f", getSaldo())
 			+ "\nLimite de saque: R$ " + String.format("%.2f", getLimiteSaque());
+	}
+	
+	@Override
+	public int compareTo(ContaEntidade outra) {
+		return Integer.compare(this.agencia, outra.agencia);
 	}
 
 }

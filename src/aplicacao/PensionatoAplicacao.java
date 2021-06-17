@@ -2,7 +2,7 @@ package aplicacao;
 
 import java.util.Scanner;
 
-import entidade.PensionatoEntidade;
+import entidades.PensionatoEntidade;
 
 public class PensionatoAplicacao {
 	

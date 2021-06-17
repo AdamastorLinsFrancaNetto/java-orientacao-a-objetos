@@ -2,9 +2,9 @@ package aplicacao;
 
 import java.util.Scanner;
 
-import entidade.RestauranteClienteEntidade;
-import entidade.RestauranteRefeicaoEntidade;
-import entidade.RestauranteSobremesaEntidade;
+import entidades.RestauranteClienteEntidade;
+import entidades.RestauranteRefeicaoEntidade;
+import entidades.RestauranteSobremesaEntidade;
 
 public class RestauranteAplicacao {
 	

@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import entidade.ContribuenteEntidade;
-import entidade.ContribuentePfEntidade;
-import entidade.ContribuentePjEntidade;
+import entidades.ContribuenteEntidade;
+import entidades.ContribuentePfEntidade;
+import entidades.ContribuentePjEntidade;
 
 public class ContribuienteAplicacao {
 	

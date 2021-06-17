@@ -1,7 +1,7 @@
 package aplicacao;
 
-import entidade.ClienteCompraEntidade;
-import entidade.ClienteEntidade;
+import entidades.ClienteCompraEntidade;
+import entidades.ClienteEntidade;
 
 public class ClienteAplicacao {
 	

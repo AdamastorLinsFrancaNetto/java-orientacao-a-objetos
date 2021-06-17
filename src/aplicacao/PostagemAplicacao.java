@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-import entidade.PostagemEntidade;
+import entidades.PostagemEntidade;
 
 public class PostagemAplicacao {
 	

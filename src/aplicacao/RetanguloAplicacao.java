@@ -2,7 +2,7 @@ package aplicacao;
 
 import java.util.Scanner;
 
-import entidade.RetanguloEntidade;
+import entidades.RetanguloEntidade;
 
 public class RetanguloAplicacao {
 	

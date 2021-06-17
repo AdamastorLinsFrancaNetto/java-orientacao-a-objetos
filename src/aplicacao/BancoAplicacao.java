@@ -2,7 +2,7 @@ package aplicacao;
 
 import java.util.Scanner;
 
-import entidade.BancoEntidade;
+import entidades.BancoEntidade;
 
 public class BancoAplicacao {
 

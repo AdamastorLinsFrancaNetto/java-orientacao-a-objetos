@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import entidade.TipoProdutoEntidade;
-import entidade.TipoProdutoImportadoEntidade;
-import entidade.TipoProdutoUsadoEntidade;
+import entidades.TipoProdutoEntidade;
+import entidades.TipoProdutoImportadoEntidade;
+import entidades.TipoProdutoUsadoEntidade;
 
 public class TipoProdutoAplicacao {
 	

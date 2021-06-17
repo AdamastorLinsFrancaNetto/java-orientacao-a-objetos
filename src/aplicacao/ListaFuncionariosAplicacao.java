@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import entidade.ListaFuncionariosEntidade;
+import entidades.ListaFuncionariosEntidade;
 
 public class ListaFuncionariosAplicacao {
 	

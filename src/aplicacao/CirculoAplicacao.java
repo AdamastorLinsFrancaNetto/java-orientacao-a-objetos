@@ -2,7 +2,7 @@ package aplicacao;
 
 import java.util.Scanner;
 
-import entidade.CirculoUtilitario;
+import entidades.CirculoUtilitario;
 
 public class CirculoAplicacao {
 
